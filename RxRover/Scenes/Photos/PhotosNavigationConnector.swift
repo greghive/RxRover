@@ -16,8 +16,10 @@ extension UINavigationController {
         let photos = PhotosViewController().scene { $0.connect() }
         viewControllers = [photos.controller]
         
-//        _ = photos.action
-//            .take(until: rx.deallocating)
-//            .bind {  }
+        _ = photos.action
+            .take(until: rx.deallocating)
+            .bind(onNext: pushScene(on: self, animated: true, scene: { photo in
+                PhotoViewController().scene { $0.connect(photo) }
+            }))
     }
 }

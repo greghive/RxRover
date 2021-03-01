@@ -9,12 +9,12 @@ import UIKit
 
 extension UIView {
     
-    func constrainEdges(to view: UIView) {
+    func constrainEdges(to view: UIView, constant: CGFloat = 0) {
         NSLayoutConstraint.activate([
-            leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            topAnchor.constraint(equalTo: view.topAnchor),
-            bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: constant),
+            trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: constant),
+            topAnchor.constraint(equalTo: view.topAnchor, constant: constant),
+            bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: constant)
         ])
     }
     

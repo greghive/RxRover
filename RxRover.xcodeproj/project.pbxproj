@@ -34,7 +34,6 @@
 		F3C707C625ED1AD80012D484 /* UITabBarItem+Chunky.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C707C525ED1AD80012D484 /* UITabBarItem+Chunky.swift */; };
 		F3C707CB25ED1C8B0012D484 /* CustomGridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C707CA25ED1C8B0012D484 /* CustomGridLayout.swift */; };
 		F3F5584B25E9781800256AA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F5584A25E9781800256AA6 /* AppDelegate.swift */; };
-		F3F5584D25E9781800256AA6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F5584C25E9781800256AA6 /* SceneDelegate.swift */; };
 		F3F5585525E9781800256AA6 /* RxRover.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3F5585325E9781800256AA6 /* RxRover.xcdatamodeld */; };
 		F3F5585725E9781A00256AA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3F5585625E9781A00256AA6 /* Assets.xcassets */; };
 		F3F5585A25E9781A00256AA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3F5585825E9781A00256AA6 /* LaunchScreen.storyboard */; };
@@ -91,7 +90,6 @@
 		F3C707CA25ED1C8B0012D484 /* CustomGridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGridLayout.swift; sourceTree = "<group>"; };
 		F3F5584725E9781800256AA6 /* RxRover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxRover.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3F5584A25E9781800256AA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F3F5584C25E9781800256AA6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F3F5585425E9781800256AA6 /* RxRover.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RxRover.xcdatamodel; sourceTree = "<group>"; };
 		F3F5585625E9781A00256AA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3F5585925E9781A00256AA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -234,8 +232,8 @@
 		F392AA5D25EAC048000BAA5D /* Photo */ = {
 			isa = PBXGroup;
 			children = (
-				F339F67625EAC2C400BE0DD5 /* PhotoViewController.swift */,
 				F339F69625EAC55000BE0DD5 /* PhotoConnector.swift */,
+				F339F67625EAC2C400BE0DD5 /* PhotoViewController.swift */,
 			);
 			path = Photo;
 			sourceTree = "<group>";
@@ -315,7 +313,6 @@
 			isa = PBXGroup;
 			children = (
 				F3F5584A25E9781800256AA6 /* AppDelegate.swift */,
-				F3F5584C25E9781800256AA6 /* SceneDelegate.swift */,
 				F392AA4225E97C4E000BAA5D /* Scenes */,
 				F392AA4325E97C56000BAA5D /* Shared */,
 				F392AA4425E97C61000BAA5D /* Resources */,
@@ -579,7 +576,6 @@
 				F3C7079325ECF4370012D484 /* Camera.swift in Sources */,
 				F3C7076D25ECED540012D484 /* EndPoint.swift in Sources */,
 				F3C707B225ED0D4A0012D484 /* ReuseableView.swift in Sources */,
-				F3F5584D25E9781800256AA6 /* SceneDelegate.swift in Sources */,
 				F392AA7025EAC25F000BAA5D /* PhotosConnector.swift in Sources */,
 				F3C7079825ECF43E0012D484 /* Rover.swift in Sources */,
 			);
