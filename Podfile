@@ -5,7 +5,6 @@ target 'RxRover' do
     pod 'RxSwift'
     pod 'RxCocoa'
     pod 'Cause-Logic-Effect'
-    pod 'RxKingfisher'
 end
 
 target 'RxRoverTests' do

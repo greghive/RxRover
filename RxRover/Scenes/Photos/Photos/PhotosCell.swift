@@ -25,7 +25,7 @@ final class PhotosCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(imageView)
-        imageView.constrain(to: self)
+        imageView.constrainEdges(to: self)
     }
     
     required init?(coder: NSCoder) {

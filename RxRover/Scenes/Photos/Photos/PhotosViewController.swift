@@ -25,12 +25,21 @@ final class PhotosViewController: UIViewController {
         return collectionView
     }()
     
+    private(set) var activityView: UIActivityIndicatorView = {
+        let activityView = UIActivityIndicatorView(style: .large)
+        activityView.translatesAutoresizingMaskIntoConstraints = false
+        activityView.hidesWhenStopped = true
+        return activityView
+    }()
+    
     private(set) var disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .red
         view.addSubview(collectionView)
-        collectionView.constrain(to: view)
+        view.addSubview(activityView)
+        collectionView.constrainEdges(to: view)
+        activityView.constrainXY(to: view)
     }
 }

@@ -8,24 +8,33 @@
 import Foundation
 import RxSwift
 import RxCocoa
-import RxKingfisher
-import Kingfisher
 
 extension PhotosViewController {
     func connect() -> Observable<Photo> {
-
-        // will need another observable for segmented control input
-        // mapped from index (maybe?) to a Rover
         
-        //collectionView.register(PhotosCell.reuseIdentifier) // remove this
         collectionView.register(PhotosCell.self, forCellWithReuseIdentifier: PhotosCell.reuseIdentifier)
         
-        let photos = collectionView.refreshControl!.rx
+        let refresh = collectionView.refreshControl!.rx
             .controlEvent(.valueChanged)
+            .share()
+        
+        let photos = refresh
             .startWith(())
             .flatMapLatest { apiResponse(from: .getPhotos(for: .curiosity)) }
             .map { $0.photos }
             .share(replay: 1)
+        
+        _ = Observable.merge(
+                refresh.map(to: true),
+                photos.map(to: false))
+            .take(until: rx.deallocating)
+            .bind(to: collectionView.refreshControl!.rx.isRefreshing)
+        
+        _ = photos
+            .take(1)
+            .map(to: false)
+            .startWith(true)
+            .bind(to: activityView.rx.isAnimating)
         
         _ = photos
             .take(until: rx.deallocating)
@@ -42,10 +51,6 @@ extension PhotosViewController {
 
 extension PhotosCell {
     func bind(with photo: Photo) {
-//        Observable.just(photo.imgUrl)
-//            .bind(to: imageView.kf.rx.image(options: [.transition(.fade(0.2))]))
-        
-        
         URLSession.shared.rx
             .data(request: photo.imgRequest)
             .map { UIImage(data: $0) }
