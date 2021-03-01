@@ -1,0 +1,7 @@
+${PODS_ROOT}/Target Support Files/Pods-RxRover/Pods-RxRover-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Cause-Logic-Effect/Cause_Logic_Effect.framework
+${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
+${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework
+${BUILT_PRODUCTS_DIR}/RxKingfisher/RxKingfisher.framework
+${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework
+${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework

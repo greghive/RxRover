@@ -1,0 +1,6 @@
+framework module Cause_Logic_Effect {
+  umbrella header "Cause-Logic-Effect-umbrella.h"
+
+  export *
+  module * { export * }
+}
