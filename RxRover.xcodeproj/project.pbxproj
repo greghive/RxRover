@@ -3,10 +3,37 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A3C23ECF10C125934BB6FF8 /* Pods_RxRoverTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F924A062ACC87DA98CBA687 /* Pods_RxRoverTests.framework */; };
+		67AFE995A5C78CA5AC6ECBB5 /* Pods_RxRover.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 489246C6110D30E78A51A9A3 /* Pods_RxRover.framework */; };
+		F3206B7225ED24230051C31F /* UICollectionView+Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3206B7125ED24230051C31F /* UICollectionView+Cells.swift */; };
+		F3206B7725ED31270051C31F /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3206B7625ED31270051C31F /* UIView+AutoLayout.swift */; };
+		F3206B7C25ED31940051C31F /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3206B7B25ED31940051C31F /* UIImage+Color.swift */; };
+		F339F67725EAC2C400BE0DD5 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F339F67625EAC2C400BE0DD5 /* PhotoViewController.swift */; };
+		F339F68225EAC4A400BE0DD5 /* FavsNavigtionConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F339F68125EAC4A400BE0DD5 /* FavsNavigtionConnector.swift */; };
+		F339F68A25EAC4D500BE0DD5 /* FavsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F339F68925EAC4D500BE0DD5 /* FavsViewController.swift */; };
+		F339F69225EAC53C00BE0DD5 /* FavsConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F339F69125EAC53C00BE0DD5 /* FavsConnector.swift */; };
+		F339F69725EAC55000BE0DD5 /* PhotoConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F339F69625EAC55000BE0DD5 /* PhotoConnector.swift */; };
+		F339F69D25EAC5D900BE0DD5 /* RoversViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F339F69C25EAC5D900BE0DD5 /* RoversViewController.swift */; };
+		F339F6A525EAC60500BE0DD5 /* RoversConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F339F6A425EAC60500BE0DD5 /* RoversConnector.swift */; };
+		F392AA6025EAC159000BAA5D /* PhotosNavigationConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F392AA5F25EAC159000BAA5D /* PhotosNavigationConnector.swift */; };
+		F392AA6825EAC215000BAA5D /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F392AA6725EAC215000BAA5D /* PhotosViewController.swift */; };
+		F392AA7025EAC25F000BAA5D /* PhotosConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F392AA6F25EAC25F000BAA5D /* PhotosConnector.swift */; };
+		F3C7076D25ECED540012D484 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C7076C25ECED540012D484 /* EndPoint.swift */; };
+		F3C7077225ECEE7B0012D484 /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C7077125ECEE7B0012D484 /* NetworkUtils.swift */; };
+		F3C7077D25ECEF2D0012D484 /* URLComponents+QueryItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C7077C25ECEF2D0012D484 /* URLComponents+QueryItems.swift */; };
+		F3C7078625ECF3680012D484 /* NetworkRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C7078525ECF3680012D484 /* NetworkRequests.swift */; };
+		F3C7078E25ECF42E0012D484 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C7078D25ECF42E0012D484 /* Photo.swift */; };
+		F3C7079325ECF4370012D484 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C7079225ECF4370012D484 /* Camera.swift */; };
+		F3C7079825ECF43E0012D484 /* Rover.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C7079725ECF43E0012D484 /* Rover.swift */; };
+		F3C707AA25ED0C3B0012D484 /* PhotosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C707A925ED0C3B0012D484 /* PhotosCell.swift */; };
+		F3C707B225ED0D4A0012D484 /* ReuseableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C707B125ED0D4A0012D484 /* ReuseableView.swift */; };
+		F3C707BE25ED1A760012D484 /* TabsConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C707BD25ED1A760012D484 /* TabsConnector.swift */; };
+		F3C707C625ED1AD80012D484 /* UITabBarItem+Chunky.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C707C525ED1AD80012D484 /* UITabBarItem+Chunky.swift */; };
+		F3C707CB25ED1C8B0012D484 /* CustomGridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C707CA25ED1C8B0012D484 /* CustomGridLayout.swift */; };
 		F3F5584B25E9781800256AA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F5584A25E9781800256AA6 /* AppDelegate.swift */; };
 		F3F5584D25E9781800256AA6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F5584C25E9781800256AA6 /* SceneDelegate.swift */; };
 		F3F5584F25E9781800256AA6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F5584E25E9781800256AA6 /* ViewController.swift */; };
@@ -36,6 +63,36 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0CC08E32F568D712D105EE43 /* Pods-RxRover.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxRover.debug.xcconfig"; path = "Target Support Files/Pods-RxRover/Pods-RxRover.debug.xcconfig"; sourceTree = "<group>"; };
+		27E22C8218D314E0B8BB61D0 /* Pods-RxRoverTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxRoverTests.release.xcconfig"; path = "Target Support Files/Pods-RxRoverTests/Pods-RxRoverTests.release.xcconfig"; sourceTree = "<group>"; };
+		489246C6110D30E78A51A9A3 /* Pods_RxRover.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxRover.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F924A062ACC87DA98CBA687 /* Pods_RxRoverTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxRoverTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFF0EEB227FF0529B8EFEB42 /* Pods-RxRover.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxRover.release.xcconfig"; path = "Target Support Files/Pods-RxRover/Pods-RxRover.release.xcconfig"; sourceTree = "<group>"; };
+		F3206B7125ED24230051C31F /* UICollectionView+Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Cells.swift"; sourceTree = "<group>"; };
+		F3206B7625ED31270051C31F /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
+		F3206B7B25ED31940051C31F /* UIImage+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Color.swift"; sourceTree = "<group>"; };
+		F339F67625EAC2C400BE0DD5 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		F339F68125EAC4A400BE0DD5 /* FavsNavigtionConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavsNavigtionConnector.swift; sourceTree = "<group>"; };
+		F339F68925EAC4D500BE0DD5 /* FavsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavsViewController.swift; sourceTree = "<group>"; };
+		F339F69125EAC53C00BE0DD5 /* FavsConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavsConnector.swift; sourceTree = "<group>"; };
+		F339F69625EAC55000BE0DD5 /* PhotoConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoConnector.swift; sourceTree = "<group>"; };
+		F339F69C25EAC5D900BE0DD5 /* RoversViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoversViewController.swift; sourceTree = "<group>"; };
+		F339F6A425EAC60500BE0DD5 /* RoversConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoversConnector.swift; sourceTree = "<group>"; };
+		F392AA5F25EAC159000BAA5D /* PhotosNavigationConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosNavigationConnector.swift; sourceTree = "<group>"; };
+		F392AA6725EAC215000BAA5D /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		F392AA6F25EAC25F000BAA5D /* PhotosConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosConnector.swift; sourceTree = "<group>"; };
+		F3C7076C25ECED540012D484 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		F3C7077125ECEE7B0012D484 /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
+		F3C7077C25ECEF2D0012D484 /* URLComponents+QueryItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLComponents+QueryItems.swift"; sourceTree = "<group>"; };
+		F3C7078525ECF3680012D484 /* NetworkRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequests.swift; sourceTree = "<group>"; };
+		F3C7078D25ECF42E0012D484 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		F3C7079225ECF4370012D484 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		F3C7079725ECF43E0012D484 /* Rover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rover.swift; sourceTree = "<group>"; };
+		F3C707A925ED0C3B0012D484 /* PhotosCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCell.swift; sourceTree = "<group>"; };
+		F3C707B125ED0D4A0012D484 /* ReuseableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseableView.swift; sourceTree = "<group>"; };
+		F3C707BD25ED1A760012D484 /* TabsConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsConnector.swift; sourceTree = "<group>"; };
+		F3C707C525ED1AD80012D484 /* UITabBarItem+Chunky.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarItem+Chunky.swift"; sourceTree = "<group>"; };
+		F3C707CA25ED1C8B0012D484 /* CustomGridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGridLayout.swift; sourceTree = "<group>"; };
 		F3F5584725E9781800256AA6 /* RxRover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxRover.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3F5584A25E9781800256AA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3F5584C25E9781800256AA6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +108,7 @@
 		F3F5586B25E9781A00256AA6 /* RxRoverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxRoverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3F5586F25E9781A00256AA6 /* RxRoverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxRoverUITests.swift; sourceTree = "<group>"; };
 		F3F5587125E9781A00256AA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAE931DEEE5295270975E11F /* Pods-RxRoverTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxRoverTests.debug.xcconfig"; path = "Target Support Files/Pods-RxRoverTests/Pods-RxRoverTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67AFE995A5C78CA5AC6ECBB5 /* Pods_RxRover.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A3C23ECF10C125934BB6FF8 /* Pods_RxRoverTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +138,164 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E74C207B955DA92F3DD72E9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0CC08E32F568D712D105EE43 /* Pods-RxRover.debug.xcconfig */,
+				EFF0EEB227FF0529B8EFEB42 /* Pods-RxRover.release.xcconfig */,
+				FAE931DEEE5295270975E11F /* Pods-RxRoverTests.debug.xcconfig */,
+				27E22C8218D314E0B8BB61D0 /* Pods-RxRoverTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A3E18DDF8DD49D445B6630A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				489246C6110D30E78A51A9A3 /* Pods_RxRover.framework */,
+				7F924A062ACC87DA98CBA687 /* Pods_RxRoverTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F339F69B25EAC5BF00BE0DD5 /* Rovers */ = {
+			isa = PBXGroup;
+			children = (
+				F339F69C25EAC5D900BE0DD5 /* RoversViewController.swift */,
+				F339F6A425EAC60500BE0DD5 /* RoversConnector.swift */,
+			);
+			path = Rovers;
+			sourceTree = "<group>";
+		};
+		F392AA4225E97C4E000BAA5D /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F3C707BC25ED1A670012D484 /* Tabs */,
+				F392AA5A25EABFF6000BAA5D /* Photos */,
+				F392AA5B25EAC024000BAA5D /* Favs */,
+				F339F69B25EAC5BF00BE0DD5 /* Rovers */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		F392AA4325E97C56000BAA5D /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				F3C7076B25ECED220012D484 /* Network */,
+				F3C7078425ECEFA20012D484 /* Models */,
+				F3C707A025ECFC3F0012D484 /* Extensions */,
+				F392AA4825E97CBE000BAA5D /* CoreData */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		F392AA4425E97C61000BAA5D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F3F5585B25E9781A00256AA6 /* Info.plist */,
+				F3F5585625E9781A00256AA6 /* Assets.xcassets */,
+				F3F5585825E9781A00256AA6 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F392AA4825E97CBE000BAA5D /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				F3F5585325E9781800256AA6 /* RxRover.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		F392AA5A25EABFF6000BAA5D /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				F392AA5F25EAC159000BAA5D /* PhotosNavigationConnector.swift */,
+				F392AA5C25EAC03E000BAA5D /* Photos */,
+				F392AA5D25EAC048000BAA5D /* Photo */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
+		F392AA5B25EAC024000BAA5D /* Favs */ = {
+			isa = PBXGroup;
+			children = (
+				F339F68125EAC4A400BE0DD5 /* FavsNavigtionConnector.swift */,
+				F392AA5E25EAC0D9000BAA5D /* Favs */,
+			);
+			path = Favs;
+			sourceTree = "<group>";
+		};
+		F392AA5C25EAC03E000BAA5D /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				F392AA6F25EAC25F000BAA5D /* PhotosConnector.swift */,
+				F392AA6725EAC215000BAA5D /* PhotosViewController.swift */,
+				F3C707A925ED0C3B0012D484 /* PhotosCell.swift */,
+				F3C707CA25ED1C8B0012D484 /* CustomGridLayout.swift */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
+		F392AA5D25EAC048000BAA5D /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				F339F67625EAC2C400BE0DD5 /* PhotoViewController.swift */,
+				F339F69625EAC55000BE0DD5 /* PhotoConnector.swift */,
+			);
+			path = Photo;
+			sourceTree = "<group>";
+		};
+		F392AA5E25EAC0D9000BAA5D /* Favs */ = {
+			isa = PBXGroup;
+			children = (
+				F339F68925EAC4D500BE0DD5 /* FavsViewController.swift */,
+				F339F69125EAC53C00BE0DD5 /* FavsConnector.swift */,
+			);
+			path = Favs;
+			sourceTree = "<group>";
+		};
+		F3C7076B25ECED220012D484 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F3C7076C25ECED540012D484 /* EndPoint.swift */,
+				F3C7077125ECEE7B0012D484 /* NetworkUtils.swift */,
+				F3C7078525ECF3680012D484 /* NetworkRequests.swift */,
+				F3C7077C25ECEF2D0012D484 /* URLComponents+QueryItems.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F3C7078425ECEFA20012D484 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F3C7078D25ECF42E0012D484 /* Photo.swift */,
+				F3C7079225ECF4370012D484 /* Camera.swift */,
+				F3C7079725ECF43E0012D484 /* Rover.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F3C707A025ECFC3F0012D484 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F3C707B125ED0D4A0012D484 /* ReuseableView.swift */,
+				F3C707C525ED1AD80012D484 /* UITabBarItem+Chunky.swift */,
+				F3206B7125ED24230051C31F /* UICollectionView+Cells.swift */,
+				F3206B7625ED31270051C31F /* UIView+AutoLayout.swift */,
+				F3206B7B25ED31940051C31F /* UIImage+Color.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F3C707BC25ED1A670012D484 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				F3C707BD25ED1A760012D484 /* TabsConnector.swift */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
 		F3F5583E25E9781800256AA6 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +303,8 @@
 				F3F5586325E9781A00256AA6 /* RxRoverTests */,
 				F3F5586E25E9781A00256AA6 /* RxRoverUITests */,
 				F3F5584825E9781800256AA6 /* Products */,
+				6E74C207B955DA92F3DD72E9 /* Pods */,
+				A3E18DDF8DD49D445B6630A2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,12 +323,11 @@
 			children = (
 				F3F5584A25E9781800256AA6 /* AppDelegate.swift */,
 				F3F5584C25E9781800256AA6 /* SceneDelegate.swift */,
+				F392AA4225E97C4E000BAA5D /* Scenes */,
+				F392AA4325E97C56000BAA5D /* Shared */,
+				F392AA4425E97C61000BAA5D /* Resources */,
 				F3F5584E25E9781800256AA6 /* ViewController.swift */,
 				F3F5585025E9781800256AA6 /* Main.storyboard */,
-				F3F5585625E9781A00256AA6 /* Assets.xcassets */,
-				F3F5585825E9781A00256AA6 /* LaunchScreen.storyboard */,
-				F3F5585B25E9781A00256AA6 /* Info.plist */,
-				F3F5585325E9781800256AA6 /* RxRover.xcdatamodeld */,
 			);
 			path = RxRover;
 			sourceTree = "<group>";
@@ -138,9 +357,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F3F5587425E9781A00256AA6 /* Build configuration list for PBXNativeTarget "RxRover" */;
 			buildPhases = (
+				4799A68FB1DE12F42B582481 /* [CP] Check Pods Manifest.lock */,
 				F3F5584325E9781800256AA6 /* Sources */,
 				F3F5584425E9781800256AA6 /* Frameworks */,
 				F3F5584525E9781800256AA6 /* Resources */,
+				7F2F674246B382C45F62FBBB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,9 +376,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F3F5587725E9781A00256AA6 /* Build configuration list for PBXNativeTarget "RxRoverTests" */;
 			buildPhases = (
+				69A9E96B8BEBB51419EB2529 /* [CP] Check Pods Manifest.lock */,
 				F3F5585C25E9781A00256AA6 /* Sources */,
 				F3F5585D25E9781A00256AA6 /* Frameworks */,
 				F3F5585E25E9781A00256AA6 /* Resources */,
+				B66E1D8C1C3CD421B6120605 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -256,15 +479,121 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4799A68FB1DE12F42B582481 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RxRover-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		69A9E96B8BEBB51419EB2529 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RxRoverTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F2F674246B382C45F62FBBB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RxRover/Pods-RxRover-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RxRover/Pods-RxRover-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RxRover/Pods-RxRover-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B66E1D8C1C3CD421B6120605 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RxRoverTests/Pods-RxRoverTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RxRoverTests/Pods-RxRoverTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RxRoverTests/Pods-RxRoverTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F3F5584325E9781800256AA6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F339F69725EAC55000BE0DD5 /* PhotoConnector.swift in Sources */,
 				F3F5585525E9781800256AA6 /* RxRover.xcdatamodeld in Sources */,
 				F3F5584F25E9781800256AA6 /* ViewController.swift in Sources */,
+				F3C707BE25ED1A760012D484 /* TabsConnector.swift in Sources */,
+				F339F68A25EAC4D500BE0DD5 /* FavsViewController.swift in Sources */,
+				F3C7077D25ECEF2D0012D484 /* URLComponents+QueryItems.swift in Sources */,
+				F339F69225EAC53C00BE0DD5 /* FavsConnector.swift in Sources */,
+				F3206B7C25ED31940051C31F /* UIImage+Color.swift in Sources */,
+				F3C707AA25ED0C3B0012D484 /* PhotosCell.swift in Sources */,
+				F3C707C625ED1AD80012D484 /* UITabBarItem+Chunky.swift in Sources */,
+				F339F68225EAC4A400BE0DD5 /* FavsNavigtionConnector.swift in Sources */,
+				F339F69D25EAC5D900BE0DD5 /* RoversViewController.swift in Sources */,
+				F3C7077225ECEE7B0012D484 /* NetworkUtils.swift in Sources */,
 				F3F5584B25E9781800256AA6 /* AppDelegate.swift in Sources */,
+				F339F6A525EAC60500BE0DD5 /* RoversConnector.swift in Sources */,
+				F392AA6825EAC215000BAA5D /* PhotosViewController.swift in Sources */,
+				F3C7078E25ECF42E0012D484 /* Photo.swift in Sources */,
+				F392AA6025EAC159000BAA5D /* PhotosNavigationConnector.swift in Sources */,
+				F3206B7725ED31270051C31F /* UIView+AutoLayout.swift in Sources */,
+				F339F67725EAC2C400BE0DD5 /* PhotoViewController.swift in Sources */,
+				F3C707CB25ED1C8B0012D484 /* CustomGridLayout.swift in Sources */,
+				F3C7078625ECF3680012D484 /* NetworkRequests.swift in Sources */,
+				F3C7079325ECF4370012D484 /* Camera.swift in Sources */,
+				F3C7076D25ECED540012D484 /* EndPoint.swift in Sources */,
+				F3206B7225ED24230051C31F /* UICollectionView+Cells.swift in Sources */,
+				F3C707B225ED0D4A0012D484 /* ReuseableView.swift in Sources */,
 				F3F5584D25E9781800256AA6 /* SceneDelegate.swift in Sources */,
+				F392AA7025EAC25F000BAA5D /* PhotosConnector.swift in Sources */,
+				F3C7079825ECF43E0012D484 /* Rover.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,12 +766,13 @@
 		};
 		F3F5587525E9781A00256AA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CC08E32F568D712D105EE43 /* Pods-RxRover.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9ZR496RB3Q;
-				INFOPLIST_FILE = RxRover/Info.plist;
+				INFOPLIST_FILE = RxRover/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,12 +786,13 @@
 		};
 		F3F5587625E9781A00256AA6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFF0EEB227FF0529B8EFEB42 /* Pods-RxRover.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9ZR496RB3Q;
-				INFOPLIST_FILE = RxRover/Info.plist;
+				INFOPLIST_FILE = RxRover/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -475,6 +806,7 @@
 		};
 		F3F5587825E9781A00256AA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAE931DEEE5295270975E11F /* Pods-RxRoverTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -497,6 +829,7 @@
 		};
 		F3F5587925E9781A00256AA6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27E22C8218D314E0B8BB61D0 /* Pods-RxRoverTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
