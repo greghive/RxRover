@@ -10,10 +10,18 @@ import RxSwift
 
 final class PhotosViewController: UIViewController {
     
-//    private(set) var segmentedControl: UISegmentedControl = {
-//        let segmentedControl = UISegmentedControl()
-//        return segmentedControl
-//    }()
+    private(set) var segmentedContainer: UIView = {
+        let segmentedContainer = UIView(frame: .zero)
+        segmentedContainer.translatesAutoresizingMaskIntoConstraints = false
+        segmentedContainer.backgroundColor = .secondarySystemBackground
+        return segmentedContainer
+    }()
+    
+    private(set) var segmentedControl: UISegmentedControl = {
+        let segmentedControl = UISegmentedControl()
+        segmentedControl.translatesAutoresizingMaskIntoConstraints = false
+        return segmentedControl
+    }()
     
     private(set) var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: CustomGridLayout())
@@ -36,10 +44,28 @@ final class PhotosViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        title = "Mars Photos"
+        view.backgroundColor = .systemBackground
+        view.addSubview(segmentedContainer)
         view.addSubview(collectionView)
         view.addSubview(activityView)
-        collectionView.constrainEdges(to: view)
-        activityView.constrainXY(to: view)
+        
+        segmentedContainer.addSubview(segmentedControl)
+        segmentedControl.constrainEdges(to: segmentedContainer, constant: 12)
+        
+        NSLayoutConstraint.activate([
+            segmentedContainer.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            segmentedContainer.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            segmentedContainer.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            collectionView.topAnchor.constraint(equalTo: segmentedContainer.bottomAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+        ])
+        
+        activityView.constrainCenter(to: view)
     }
 }

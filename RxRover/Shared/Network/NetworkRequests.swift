@@ -10,12 +10,6 @@ import Foundation
 let baseURLString = "https://api.nasa.gov"
 let apiKey = "6SLK3Bos2lYOnQLpRImRWyb28yty4qV2RnzdVjaa" // ❌ this is a demo...obv don't do this in production! ❌
 
-enum RoverName: String {
-    case curiosity
-    case opportunity
-    case spirit
-}
-
 struct GetPhotosResponse: Decodable {
     let photos: [Photo]
 }
@@ -41,6 +35,7 @@ extension Endpoint where T == GetPhotosResponse {
             URLQueryItem(name: "api_key", value: apiKey)
         ]
         //let query = components.queryItems = ["sol": "\(sol)", "api_key": apiKey].map { URLQueryItem(name: $0.key, value: $0.value) }
+        // create an extension that takes dict????
         return Endpoint(request: URLRequest(url: components.url!), decoder: jsonDecoder)
     }
 }

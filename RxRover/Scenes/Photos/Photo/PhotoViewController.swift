@@ -83,3 +83,11 @@ final class PhotoViewController: UIViewController {
         stackView.addArrangedSubview(roverLabel)
     }
 }
+
+extension UISegmentedControl {
+    func set(titles: [String], animated: Bool = false) {
+        for (index, title) in titles.enumerated() {
+            insertSegment(withTitle: title, at: index, animated: animated)
+        }
+    }
+}

@@ -21,6 +21,10 @@
 		F392AA6025EAC159000BAA5D /* PhotosNavigationConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F392AA5F25EAC159000BAA5D /* PhotosNavigationConnector.swift */; };
 		F392AA6825EAC215000BAA5D /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F392AA6725EAC215000BAA5D /* PhotosViewController.swift */; };
 		F392AA7025EAC25F000BAA5D /* PhotosConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F392AA6F25EAC25F000BAA5D /* PhotosConnector.swift */; };
+		F3C0453125EE262D00727FD4 /* PhotosLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C0453025EE262D00727FD4 /* PhotosLogic.swift */; };
+		F3C0453B25EE489400727FD4 /* RoverName.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C0453A25EE489400727FD4 /* RoverName.swift */; };
+		F3C0454025EE49A800727FD4 /* PhotosLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C0453F25EE49A800727FD4 /* PhotosLogicTests.swift */; };
+		F3C0454B25EE5CC300727FD4 /* RxHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C0454A25EE5CC300727FD4 /* RxHelpers.swift */; };
 		F3C7076D25ECED540012D484 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C7076C25ECED540012D484 /* EndPoint.swift */; };
 		F3C7077225ECEE7B0012D484 /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C7077125ECEE7B0012D484 /* NetworkUtils.swift */; };
 		F3C7077D25ECEF2D0012D484 /* URLComponents+QueryItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C7077C25ECEF2D0012D484 /* URLComponents+QueryItems.swift */; };
@@ -76,6 +80,10 @@
 		F392AA5F25EAC159000BAA5D /* PhotosNavigationConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosNavigationConnector.swift; sourceTree = "<group>"; };
 		F392AA6725EAC215000BAA5D /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		F392AA6F25EAC25F000BAA5D /* PhotosConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosConnector.swift; sourceTree = "<group>"; };
+		F3C0453025EE262D00727FD4 /* PhotosLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosLogic.swift; sourceTree = "<group>"; };
+		F3C0453A25EE489400727FD4 /* RoverName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverName.swift; sourceTree = "<group>"; };
+		F3C0453F25EE49A800727FD4 /* PhotosLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosLogicTests.swift; sourceTree = "<group>"; };
+		F3C0454A25EE5CC300727FD4 /* RxHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxHelpers.swift; sourceTree = "<group>"; };
 		F3C7076C25ECED540012D484 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		F3C7077125ECEE7B0012D484 /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
 		F3C7077C25ECEF2D0012D484 /* URLComponents+QueryItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLComponents+QueryItems.swift"; sourceTree = "<group>"; };
@@ -221,8 +229,9 @@
 		F392AA5C25EAC03E000BAA5D /* Photos */ = {
 			isa = PBXGroup;
 			children = (
-				F392AA6F25EAC25F000BAA5D /* PhotosConnector.swift */,
 				F392AA6725EAC215000BAA5D /* PhotosViewController.swift */,
+				F3C0453025EE262D00727FD4 /* PhotosLogic.swift */,
+				F392AA6F25EAC25F000BAA5D /* PhotosConnector.swift */,
 				F3C707A925ED0C3B0012D484 /* PhotosCell.swift */,
 				F3C707CA25ED1C8B0012D484 /* CustomGridLayout.swift */,
 			);
@@ -264,6 +273,7 @@
 				F3C7078D25ECF42E0012D484 /* Photo.swift */,
 				F3C7079225ECF4370012D484 /* Camera.swift */,
 				F3C7079725ECF43E0012D484 /* Rover.swift */,
+				F3C0453A25EE489400727FD4 /* RoverName.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -275,6 +285,7 @@
 				F3C707C525ED1AD80012D484 /* UITabBarItem+Chunky.swift */,
 				F3206B7625ED31270051C31F /* UIView+AutoLayout.swift */,
 				F3206B7B25ED31940051C31F /* UIImage+Color.swift */,
+				F3C0454A25EE5CC300727FD4 /* RxHelpers.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -323,6 +334,7 @@
 		F3F5586325E9781A00256AA6 /* RxRoverTests */ = {
 			isa = PBXGroup;
 			children = (
+				F3C0453F25EE49A800727FD4 /* PhotosLogicTests.swift */,
 				F3F5586425E9781A00256AA6 /* RxRoverTests.swift */,
 				F3F5586625E9781A00256AA6 /* Info.plist */,
 			);
@@ -561,10 +573,13 @@
 				F3206B7C25ED31940051C31F /* UIImage+Color.swift in Sources */,
 				F3C707AA25ED0C3B0012D484 /* PhotosCell.swift in Sources */,
 				F3C707C625ED1AD80012D484 /* UITabBarItem+Chunky.swift in Sources */,
+				F3C0453B25EE489400727FD4 /* RoverName.swift in Sources */,
 				F339F68225EAC4A400BE0DD5 /* FavsNavigtionConnector.swift in Sources */,
 				F339F69D25EAC5D900BE0DD5 /* RoversViewController.swift in Sources */,
+				F3C0454B25EE5CC300727FD4 /* RxHelpers.swift in Sources */,
 				F3C7077225ECEE7B0012D484 /* NetworkUtils.swift in Sources */,
 				F3F5584B25E9781800256AA6 /* AppDelegate.swift in Sources */,
+				F3C0453125EE262D00727FD4 /* PhotosLogic.swift in Sources */,
 				F339F6A525EAC60500BE0DD5 /* RoversConnector.swift in Sources */,
 				F392AA6825EAC215000BAA5D /* PhotosViewController.swift in Sources */,
 				F3C7078E25ECF42E0012D484 /* Photo.swift in Sources */,
@@ -586,6 +601,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3F5586525E9781A00256AA6 /* RxRoverTests.swift in Sources */,
+				F3C0454025EE49A800727FD4 /* PhotosLogicTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,6 +16,7 @@ extension PhotoViewController {
             .bind(to: imageView.rx.image)
             .disposed(by: disposeBag)
         
+        // move all this to PhotoLogic
         cameraLabel.text = photo.camera.fullName
         solLabel.text = "\(photo.sol)"
         dateLabel.text = photo.earthDate

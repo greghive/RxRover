@@ -12,13 +12,13 @@ extension UIView {
     func constrainEdges(to view: UIView, constant: CGFloat = 0) {
         NSLayoutConstraint.activate([
             leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: constant),
-            trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: constant),
+            trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -constant),
             topAnchor.constraint(equalTo: view.topAnchor, constant: constant),
-            bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: constant)
+            bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -constant)
         ])
     }
     
-    func constrainXY(to view: UIView) {
+    func constrainCenter(to view: UIView) {
         NSLayoutConstraint.activate([
             centerXAnchor.constraint(equalTo: view.centerXAnchor),
             centerYAnchor.constraint(equalTo: view.centerYAnchor)

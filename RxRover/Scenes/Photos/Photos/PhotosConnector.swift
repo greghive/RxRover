@@ -11,36 +11,54 @@ import RxCocoa
 
 extension PhotosViewController {
     func connect() -> Observable<Photo> {
+                
+        //MARK: config vc
         
+        segmentedControl.set(titles: PhotosLogic.roverNames.map { $0.name })
+        segmentedControl.selectedSegmentIndex = 0
         collectionView.register(PhotosCell.self, forCellWithReuseIdentifier: PhotosCell.reuseIdentifier)
         
-        let refresh = collectionView.refreshControl!.rx
-            .controlEvent(.valueChanged)
-            .share()
+        //MARK: wire logic
         
-        let photos = refresh
-            .startWith(())
-            .flatMapLatest { apiResponse(from: .getPhotos(for: .curiosity)) }
-            .map { $0.photos }
+        let refreshTrigger = collectionView.refreshControl!.rx
+            .controlEvent(.valueChanged)
+            .mapVoid()
             .share(replay: 1)
         
-        _ = Observable.merge(
-                refresh.map(to: true),
-                photos.map(to: false))
+        let filterTrigger = segmentedControl.rx
+            .value
+            .asObservable()
+            .share(replay: 1)
+        
+        let trigger = PhotosLogic.trigger(trigger: refreshTrigger, selectedIndex: filterTrigger)
+            .share(replay: 1)
+        
+        let response = trigger
+            .flatMapLatest { apiResponse(from: .getPhotos(for: $0)) }
+        
+        let photos = PhotosLogic.photos(from: response)
+            .share(replay: 1)
+        
+        let loading = PhotosLogic.loading(start: trigger.mapVoid(), complete: photos.mapVoid())
+            .share(replay: 1)
+        
+        //MARK:  bind UI
+        
+        _ = PhotosLogic.initialLoading(loading: loading)
+            .take(until: rx.deallocating)
+            .bind(to: activityView.rx.isAnimating)
+        
+        _ = PhotosLogic.refreshLoading(loading: loading)
             .take(until: rx.deallocating)
             .bind(to: collectionView.refreshControl!.rx.isRefreshing)
-        
-        _ = photos
-            .take(1)
-            .map(to: false)
-            .startWith(true)
-            .bind(to: activityView.rx.isAnimating)
         
         _ = photos
             .take(until: rx.deallocating)
             .bind(to: collectionView.rx.items(cellIdentifier: PhotosCell.reuseIdentifier, cellType: PhotosCell.self)) { _, photo, cell in
                 cell.bind(with: photo)
             }
+        
+        //MARK: Scene Action
         
         return collectionView.rx
             .itemSelected
