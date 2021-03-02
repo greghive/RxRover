@@ -20,19 +20,19 @@ extension PhotosViewController {
         
         //MARK: vc causes
         
-        let refreshTrigger = collectionView.refreshControl!.rx
+        let refresh = collectionView.refreshControl!.rx
             .controlEvent(.valueChanged)
             .mapVoid()
             .share(replay: 1)
         
-        let filterTrigger = segmentedControl.rx
+        let filter = segmentedControl.rx
             .value
             .asObservable()
             .share(replay: 1)
         
         //MARK: wire logic
         
-        let trigger = PhotosLogic.trigger(trigger: refreshTrigger, selectedIndex: filterTrigger)
+        let trigger = PhotosLogic.trigger(refresh, filter)
             .share(replay: 1)
         
         let response = trigger
@@ -44,7 +44,7 @@ extension PhotosViewController {
         let loading = PhotosLogic.loading(start: trigger.mapVoid(), complete: photos.mapVoid())
             .share(replay: 1)
         
-        //MARK:  bind effects
+        //MARK: bind UI effects
         
         _ = PhotosLogic.initialLoading(loading: loading)
             .take(until: rx.deallocating)

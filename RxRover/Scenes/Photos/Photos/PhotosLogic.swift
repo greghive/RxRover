@@ -12,26 +12,20 @@ enum PhotosLogic {
     
     static func roverName(at index: Int) -> RoverName { roverNames[index] }
     
-    static func trigger(trigger: Observable<Void>, selectedIndex: Observable<Int>) -> Observable<RoverName> {
-       
-        let refresh = trigger
-            .withLatestFrom(selectedIndex)
-            .map { PhotosLogic.roverName(at: $0) }
-        
-        let filter = selectedIndex
-            .map { PhotosLogic.roverName(at: $0) }
-        
-        return Observable.merge(refresh, filter)
+    static func trigger(_ refreshTrigger: Observable<Void>, _ filterTrigger: Observable<Int>) -> Observable<RoverName> {
+        let a = refresh(trigger: refreshTrigger, selectedIndex: filterTrigger)
+        let b = filter(trigger: filterTrigger)
+        return Observable.merge(a, b)
     }
     
-//    static func refresh(trigger: Observable<Void>, selectedIndex: Observable<Int>) -> Observable<RoverName> {
-//        trigger.withLatestFrom(selectedIndex)
-//            .map { PhotosLogic.roverName(at: $0) }
-//    }
-//    
-//    static func filter(trigger: Observable<Int>) -> Observable<RoverName> {
-//        trigger.map { PhotosLogic.roverName(at: $0) }
-//    }
+    static func refresh(trigger: Observable<Void>, selectedIndex: Observable<Int>) -> Observable<RoverName> {
+        trigger.withLatestFrom(selectedIndex)
+            .map { PhotosLogic.roverName(at: $0) }
+    }
+    
+    static func filter(trigger: Observable<Int>) -> Observable<RoverName> {
+        trigger.map { PhotosLogic.roverName(at: $0) }
+    }
     
     static func photos(from response: Observable<GetPhotosResponse>) -> Observable<[Photo]> {
         response.map { $0.photos }
