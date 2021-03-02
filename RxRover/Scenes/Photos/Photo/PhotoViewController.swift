@@ -46,6 +46,7 @@ final class PhotoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Photo"
         view.backgroundColor = .systemBackground
         
         view.addSubview(imageView)
@@ -77,10 +78,10 @@ final class PhotoViewController: UIViewController {
         ])
         
         stackView.constrainEdges(to: stackContainer, constant: stackGap)
+        stackView.addArrangedSubview(roverLabel)
         stackView.addArrangedSubview(cameraLabel)
         stackView.addArrangedSubview(solLabel)
         stackView.addArrangedSubview(dateLabel)
-        stackView.addArrangedSubview(roverLabel)
     }
 }
 
@@ -89,5 +90,18 @@ extension UISegmentedControl {
         for (index, title) in titles.enumerated() {
             insertSegment(withTitle: title, at: index, animated: animated)
         }
+    }
+}
+
+extension NSAttributedString {
+    static func from(_ tvt: PhotoLogic.TitleValueText) -> NSAttributedString {
+        let attributesA = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 16), NSAttributedString.Key.foregroundColor : UIColor.black]
+        let attributesB = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 16), NSAttributedString.Key.foregroundColor : UIColor.black]
+        let typeString = NSAttributedString(string: tvt.title, attributes: attributesA)
+        let startString = NSAttributedString(string:tvt.value, attributes: attributesB)
+        let string = NSMutableAttributedString(attributedString: typeString)
+        string.append(NSAttributedString(string: " "))
+        string.append(startString)
+        return string
     }
 }

@@ -51,13 +51,9 @@ final class PhotosViewController: UIViewController {
         view.addSubview(activityView)
         
         segmentedContainer.addSubview(segmentedControl)
+        segmentedContainer.constrainSafeTopAndSides(to: view)
         segmentedControl.constrainEdges(to: segmentedContainer, constant: 12)
-        
-        NSLayoutConstraint.activate([
-            segmentedContainer.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            segmentedContainer.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            segmentedContainer.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-        ])
+        activityView.constrainCenter(to: view)
         
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: segmentedContainer.bottomAnchor),
@@ -65,7 +61,5 @@ final class PhotosViewController: UIViewController {
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
-        
-        activityView.constrainCenter(to: view)
     }
 }

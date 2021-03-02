@@ -18,6 +18,14 @@ extension UIView {
         ])
     }
     
+    func constrainSafeTopAndSides(to view: UIView) {
+        NSLayoutConstraint.activate([
+            topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
+    }
+    
     func constrainCenter(to view: UIView) {
         NSLayoutConstraint.activate([
             centerXAnchor.constraint(equalTo: view.centerXAnchor),
