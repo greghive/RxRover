@@ -18,7 +18,7 @@ extension PhotosViewController {
         segmentedControl.selectedSegmentIndex = 0
         collectionView.register(PhotosCell.self, forCellWithReuseIdentifier: PhotosCell.reuseIdentifier)
         
-        //MARK: wire logic
+        //MARK: vc causes
         
         let refreshTrigger = collectionView.refreshControl!.rx
             .controlEvent(.valueChanged)
@@ -29,6 +29,8 @@ extension PhotosViewController {
             .value
             .asObservable()
             .share(replay: 1)
+        
+        //MARK: wire logic
         
         let trigger = PhotosLogic.trigger(trigger: refreshTrigger, selectedIndex: filterTrigger)
             .share(replay: 1)
@@ -42,7 +44,7 @@ extension PhotosViewController {
         let loading = PhotosLogic.loading(start: trigger.mapVoid(), complete: photos.mapVoid())
             .share(replay: 1)
         
-        //MARK:  bind UI
+        //MARK:  bind effects
         
         _ = PhotosLogic.initialLoading(loading: loading)
             .take(until: rx.deallocating)
@@ -58,7 +60,7 @@ extension PhotosViewController {
                 cell.bind(with: photo)
             }
         
-        //MARK: Scene Action
+        //MARK: scene action
         
         return collectionView.rx
             .itemSelected

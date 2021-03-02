@@ -44,7 +44,7 @@ final class PhotosViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Mars Photos"
+        title = "Photos"
         view.backgroundColor = .systemBackground
         view.addSubview(segmentedContainer)
         view.addSubview(collectionView)
