@@ -16,6 +16,12 @@ struct Photo: Decodable {
     let imgSrc: String
 }
 
+extension Photo: Equatable {
+    static func == (lhs: Photo, rhs: Photo) -> Bool {
+        lhs.id == rhs.id
+    }
+}
+
 extension Photo {
     
     var imgUrl: URL {

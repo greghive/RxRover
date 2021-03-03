@@ -42,7 +42,6 @@
 		F3F5585525E9781800256AA6 /* RxRover.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3F5585325E9781800256AA6 /* RxRover.xcdatamodeld */; };
 		F3F5585725E9781A00256AA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3F5585625E9781A00256AA6 /* Assets.xcassets */; };
 		F3F5585A25E9781A00256AA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3F5585825E9781A00256AA6 /* LaunchScreen.storyboard */; };
-		F3F5586525E9781A00256AA6 /* RxRoverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F5586425E9781A00256AA6 /* RxRoverTests.swift */; };
 		F3F5587025E9781A00256AA6 /* RxRoverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F5586F25E9781A00256AA6 /* RxRoverUITests.swift */; };
 /* End PBXBuildFile section */
 
@@ -105,7 +104,6 @@
 		F3F5585925E9781A00256AA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3F5585B25E9781A00256AA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3F5586025E9781A00256AA6 /* RxRoverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxRoverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3F5586425E9781A00256AA6 /* RxRoverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxRoverTests.swift; sourceTree = "<group>"; };
 		F3F5586625E9781A00256AA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3F5586B25E9781A00256AA6 /* RxRoverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxRoverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3F5586F25E9781A00256AA6 /* RxRoverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxRoverUITests.swift; sourceTree = "<group>"; };
@@ -338,7 +336,6 @@
 			isa = PBXGroup;
 			children = (
 				F3C0453F25EE49A800727FD4 /* PhotosLogicTests.swift */,
-				F3F5586425E9781A00256AA6 /* RxRoverTests.swift */,
 				F3F5586625E9781A00256AA6 /* Info.plist */,
 			);
 			path = RxRoverTests;
@@ -604,7 +601,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3F5586525E9781A00256AA6 /* RxRoverTests.swift in Sources */,
 				F3C0454025EE49A800727FD4 /* PhotosLogicTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

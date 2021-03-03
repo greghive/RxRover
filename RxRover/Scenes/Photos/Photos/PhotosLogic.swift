@@ -13,17 +13,17 @@ enum PhotosLogic {
     static func roverName(at index: Int) -> RoverName { roverNames[index] }
     
     static func trigger(_ refreshTrigger: Observable<Void>, _ filterTrigger: Observable<Int>) -> Observable<RoverName> {
-        let a = refresh(trigger: refreshTrigger, selectedIndex: filterTrigger)
-        let b = filter(trigger: filterTrigger)
+        let a = refresh(refreshTrigger, filterTrigger)
+        let b = filter(filterTrigger)
         return Observable.merge(a, b)
     }
     
-    static func refresh(trigger: Observable<Void>, selectedIndex: Observable<Int>) -> Observable<RoverName> {
+    static func refresh(_ trigger: Observable<Void>, _ selectedIndex: Observable<Int>) -> Observable<RoverName> {
         trigger.withLatestFrom(selectedIndex)
             .map { PhotosLogic.roverName(at: $0) }
     }
     
-    static func filter(trigger: Observable<Int>) -> Observable<RoverName> {
+    static func filter(_ trigger: Observable<Int>) -> Observable<RoverName> {
         trigger.map { PhotosLogic.roverName(at: $0) }
     }
     
@@ -31,15 +31,15 @@ enum PhotosLogic {
         response.map { $0.photos }
     }
     
-    static func loading(start: Observable<Void>, complete: Observable<Void>) -> Observable<Bool> {
+    static func loading(_ start: Observable<Void>, _ complete: Observable<Void>) -> Observable<Bool> {
         Observable.merge(start.map(to: true), complete.map(to: false))
     }
     
-    static func initialLoading(loading: Observable<Bool>) -> Observable<Bool> {
+    static func initialLoading(_ loading: Observable<Bool>) -> Observable<Bool> {
         loading.take(2)
     }
     
-    static func refreshLoading(loading: Observable<Bool>) -> Observable<Bool> {
+    static func refreshLoading(_ loading: Observable<Bool>) -> Observable<Bool> {
         loading.skip(1)
     }
 }

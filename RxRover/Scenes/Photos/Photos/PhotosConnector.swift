@@ -41,19 +41,18 @@ extension PhotosViewController {
         let photos = PhotosLogic.photos(from: response)
             .share(replay: 1)
         
-        let loading = PhotosLogic.loading(start: trigger.mapVoid(), complete: photos.mapVoid())
+        let loading = PhotosLogic.loading(trigger.mapVoid(), photos.mapVoid())
             .share(replay: 1)
         
         //MARK: bind UI effects
         
-        _ = PhotosLogic.initialLoading(loading: loading)
+        _ = PhotosLogic.initialLoading(loading)
             .take(until: rx.deallocating)
             .bind(to: activityView.rx.isAnimating)
         
-        _ = PhotosLogic.refreshLoading(loading: loading)
+        _ = PhotosLogic.refreshLoading(loading)
             .take(until: rx.deallocating)
             .bind(to: collectionView.refreshControl!.rx.isRefreshing)
-        
         _ = photos
             .take(until: rx.deallocating)
             .bind(to: collectionView.rx.items(cellIdentifier: PhotosCell.reuseIdentifier, cellType: PhotosCell.self)) { _, photo, cell in

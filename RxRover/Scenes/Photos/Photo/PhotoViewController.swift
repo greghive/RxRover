@@ -94,6 +94,7 @@ extension UISegmentedControl {
 }
 
 extension NSAttributedString {
+    // change this, just pass 2 strings 9pull from alpacr)
     static func from(_ tvt: PhotoLogic.TitleValueText) -> NSAttributedString {
         let attributesA = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 16), NSAttributedString.Key.foregroundColor : UIColor.black]
         let attributesB = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 16), NSAttributedString.Key.foregroundColor : UIColor.black]
