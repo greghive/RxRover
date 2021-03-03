@@ -13,9 +13,9 @@ final class PhotosCell: UICollectionViewCell {
     private(set) var imageView: UIImageView = {
         let imageView = UIImageView(frame: .zero)
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.backgroundColor = .secondarySystemBackground
         imageView.contentMode = .scaleAspectFill
         imageView.layer.cornerRadius = 8
-        imageView.backgroundColor = .secondarySystemBackground
         imageView.layer.masksToBounds = true
         return imageView
     }()
