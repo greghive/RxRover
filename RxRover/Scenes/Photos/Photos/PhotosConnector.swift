@@ -47,17 +47,17 @@ extension PhotosViewController {
         //MARK: bind UI effects
         
         _ = PhotosLogic.initialLoading(loading)
-            .take(until: rx.deallocating)
             .bind(to: activityView.rx.isAnimating)
+            .disposed(by: disposeBag)
         
         _ = PhotosLogic.refreshLoading(loading)
-            .take(until: rx.deallocating)
             .bind(to: collectionView.refreshControl!.rx.isRefreshing)
+            .disposed(by: disposeBag)
+        
         _ = photos
-            .take(until: rx.deallocating)
             .bind(to: collectionView.rx.items(cellIdentifier: PhotosCell.reuseIdentifier, cellType: PhotosCell.self)) { _, photo, cell in
                 cell.bind(with: photo)
-            }
+            }.disposed(by: disposeBag)
         
         //MARK: scene action
         
