@@ -28,9 +28,9 @@
 		F3C0455725EE86FF00727FD4 /* PhotoLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C0455625EE86FF00727FD4 /* PhotoLogic.swift */; };
 		F3C0456225EFBDD100727FD4 /* UILabel+AttributedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C0456125EFBDD100727FD4 /* UILabel+AttributedStrings.swift */; };
 		F3C0456725EFBFF700727FD4 /* PhotoLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C0456625EFBFF700727FD4 /* PhotoLogicTests.swift */; };
+		F3C0457625EFC63900727FD4 /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C0457525EFC63900727FD4 /* UIViewController+Alerts.swift */; };
 		F3C7076D25ECED540012D484 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C7076C25ECED540012D484 /* EndPoint.swift */; };
 		F3C7077225ECEE7B0012D484 /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C7077125ECEE7B0012D484 /* NetworkUtils.swift */; };
-		F3C7077D25ECEF2D0012D484 /* URLComponents+QueryItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C7077C25ECEF2D0012D484 /* URLComponents+QueryItems.swift */; };
 		F3C7078625ECF3680012D484 /* NetworkRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C7078525ECF3680012D484 /* NetworkRequests.swift */; };
 		F3C7078E25ECF42E0012D484 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C7078D25ECF42E0012D484 /* Photo.swift */; };
 		F3C7079325ECF4370012D484 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C7079225ECF4370012D484 /* Camera.swift */; };
@@ -81,9 +81,10 @@
 		F3C0455625EE86FF00727FD4 /* PhotoLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLogic.swift; sourceTree = "<group>"; };
 		F3C0456125EFBDD100727FD4 /* UILabel+AttributedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+AttributedStrings.swift"; sourceTree = "<group>"; };
 		F3C0456625EFBFF700727FD4 /* PhotoLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLogicTests.swift; sourceTree = "<group>"; };
+		F3C0457225EFC4E400727FD4 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		F3C0457525EFC63900727FD4 /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
 		F3C7076C25ECED540012D484 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		F3C7077125ECEE7B0012D484 /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
-		F3C7077C25ECEF2D0012D484 /* URLComponents+QueryItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLComponents+QueryItems.swift"; sourceTree = "<group>"; };
 		F3C7078525ECF3680012D484 /* NetworkRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequests.swift; sourceTree = "<group>"; };
 		F3C7078D25ECF42E0012D484 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		F3C7079225ECF4370012D484 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
@@ -178,6 +179,7 @@
 		F392AA4425E97C61000BAA5D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F3C0457225EFC4E400727FD4 /* Config.xcconfig */,
 				F3F5585B25E9781A00256AA6 /* Info.plist */,
 				F3F5585625E9781A00256AA6 /* Assets.xcassets */,
 				F3F5585825E9781A00256AA6 /* LaunchScreen.storyboard */,
@@ -249,7 +251,6 @@
 				F3C7076C25ECED540012D484 /* EndPoint.swift */,
 				F3C7077125ECEE7B0012D484 /* NetworkUtils.swift */,
 				F3C7078525ECF3680012D484 /* NetworkRequests.swift */,
-				F3C7077C25ECEF2D0012D484 /* URLComponents+QueryItems.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -274,6 +275,7 @@
 				F3206B7B25ED31940051C31F /* UIImage+Color.swift */,
 				F3C0454A25EE5CC300727FD4 /* RxHelpers.swift */,
 				F3C0456125EFBDD100727FD4 /* UILabel+AttributedStrings.swift */,
+				F3C0457525EFC63900727FD4 /* UIViewController+Alerts.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -515,13 +517,13 @@
 				F3F5585525E9781800256AA6 /* RxRover.xcdatamodeld in Sources */,
 				F3C707BE25ED1A760012D484 /* TabsConnector.swift in Sources */,
 				F339F68A25EAC4D500BE0DD5 /* FavsViewController.swift in Sources */,
-				F3C7077D25ECEF2D0012D484 /* URLComponents+QueryItems.swift in Sources */,
 				F339F69225EAC53C00BE0DD5 /* FavsConnector.swift in Sources */,
 				F3206B7C25ED31940051C31F /* UIImage+Color.swift in Sources */,
 				F3C0455725EE86FF00727FD4 /* PhotoLogic.swift in Sources */,
 				F3C707AA25ED0C3B0012D484 /* PhotosCell.swift in Sources */,
 				F3C707C625ED1AD80012D484 /* UITabBarItem+Chunky.swift in Sources */,
 				F3C0453B25EE489400727FD4 /* RoverName.swift in Sources */,
+				F3C0457625EFC63900727FD4 /* UIViewController+Alerts.swift in Sources */,
 				F339F68225EAC4A400BE0DD5 /* FavsNavigtionConnector.swift in Sources */,
 				F339F69D25EAC5D900BE0DD5 /* RoversViewController.swift in Sources */,
 				F3C0454B25EE5CC300727FD4 /* RxHelpers.swift in Sources */,
@@ -578,6 +580,7 @@
 /* Begin XCBuildConfiguration section */
 		F3F5587225E9781A00256AA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3C0457225EFC4E400727FD4 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -639,6 +642,7 @@
 		};
 		F3F5587325E9781A00256AA6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3C0457225EFC4E400727FD4 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;

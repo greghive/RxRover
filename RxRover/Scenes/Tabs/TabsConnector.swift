@@ -14,5 +14,12 @@ extension UITabBarController {
         let photos = UINavigationController().configure { $0.connectPhotos() }
         photos.tabBarItem = .chunky(title: "Photos", icon: "camera.fill", tag: 0)
         viewControllers = [photos]
+        
+        _ = errorRouter
+            .error
+            .map { $0.localizedDescription }
+            .bind { [unowned self] message in
+            self.showBasicAlert(message: message)
+        }
     }
 }
