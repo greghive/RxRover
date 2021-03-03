@@ -15,6 +15,7 @@ final class PhotoViewController: UIViewController {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill
         imageView.backgroundColor = .secondarySystemBackground
+        imageView.layer.masksToBounds = true
         return imageView
     }()
     
@@ -93,16 +94,12 @@ extension UISegmentedControl {
     }
 }
 
-extension NSAttributedString {
-    // change this, just pass 2 strings 9pull from alpacr)
-    static func from(_ tvt: PhotoLogic.TitleValueText) -> NSAttributedString {
-        let attributesA = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 16), NSAttributedString.Key.foregroundColor : UIColor.black]
-        let attributesB = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 16), NSAttributedString.Key.foregroundColor : UIColor.black]
-        let typeString = NSAttributedString(string: tvt.title, attributes: attributesA)
-        let startString = NSAttributedString(string:tvt.value, attributes: attributesB)
-        let string = NSMutableAttributedString(attributedString: typeString)
-        string.append(NSAttributedString(string: " "))
-        string.append(startString)
-        return string
+extension UILabel {
+    func render(for tvt: PhotoLogic.TitleValueText) {
+        let attributesA = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 16),
+                           NSAttributedString.Key.foregroundColor : UIColor.black]
+        let attributesB = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 16),
+                           NSAttributedString.Key.foregroundColor : UIColor.black]
+        render(stringA: tvt.title, attributesA: attributesA, stringB: tvt.value, attributesB: attributesB)
     }
 }

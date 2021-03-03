@@ -23,19 +23,7 @@ enum PhotoLogic {
        ("Martian Sol:", "\(photo.sol)")
     }
     
-    // this is not correct!
     static func dateText(for photo: Photo) -> TitleValueText {
-        if let date = dateFormatter.date(from: photo.earthDate) {
-            return ("Earth Date:", dateFormatter.string(from: date))
-        } else {
-            return ("Earth Date:", "Unknown")
-        }
+        ("Earth Date:", photo.earthDate)
     }
-    
-    private static var dateFormatter: DateFormatter = {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        dateFormatter.dateStyle = .medium
-        return dateFormatter
-    }()
 }

@@ -16,10 +16,10 @@ extension PhotoViewController {
             .bind(to: imageView.rx.image)
             .disposed(by: disposeBag)
         
-        roverLabel.attributedText = NSAttributedString.from(PhotoLogic.roverText(for: photo))
-        cameraLabel.attributedText = NSAttributedString.from(PhotoLogic.cameraText(for: photo))
-        solLabel.attributedText = NSAttributedString.from(PhotoLogic.solText(for: photo))
-        dateLabel.attributedText = NSAttributedString.from(PhotoLogic.dateText(for: photo))
+        roverLabel.render(for: PhotoLogic.roverText(for: photo))
+        cameraLabel.render(for: PhotoLogic.cameraText(for: photo))
+        solLabel.render(for: PhotoLogic.solText(for: photo))
+        dateLabel.render(for: PhotoLogic.dateText(for: photo))
         
         return Observable.never()
             .take(until: rx.deallocating)
