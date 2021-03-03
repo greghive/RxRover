@@ -30,27 +30,18 @@ extension PhotosViewController {
             .asObservable()
             .share(replay: 1)
         
-        //MARK: wire logic
+        //MARK: cause -> logic - > effect
         
-        let trigger = PhotosLogic.trigger(refresh, filter)
-            .share(replay: 1)
-        
-        let response = trigger
+        let photos = PhotosLogic.trigger(refresh, filter)
             .flatMapLatest { apiResponse(from: .getPhotos(for: $0)) }
-        
-        let photos = PhotosLogic.photos(from: response)
+            .map { $0.photos }
             .share(replay: 1)
         
-        let loading = PhotosLogic.loading(trigger.mapVoid(), photos.mapVoid())
-            .share(replay: 1)
-        
-        //MARK: bind UI effects
-        
-        _ = PhotosLogic.initialLoading(loading)
+        _ = PhotosLogic.initialLoading(refresh, filter, photos)
             .bind(to: activityView.rx.isAnimating)
             .disposed(by: disposeBag)
         
-        _ = PhotosLogic.refreshLoading(loading)
+        _ = PhotosLogic.refreshLoading(refresh, filter, photos)
             .bind(to: collectionView.refreshControl!.rx.isRefreshing)
             .disposed(by: disposeBag)
         
