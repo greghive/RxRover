@@ -15,7 +15,7 @@ extension PhotosViewController {
         //MARK: config vc
         
         segmentedControl.set(titles: PhotosLogic.roverNames.map { $0.name })
-        segmentedControl.selectedSegmentIndex = 0
+        segmentedControl.selectedSegmentIndex = 2
         collectionView.register(PhotosCell.self, forCellWithReuseIdentifier: PhotosCell.reuseIdentifier)
         
         //MARK: vc causes
