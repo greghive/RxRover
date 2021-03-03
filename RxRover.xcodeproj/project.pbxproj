@@ -44,18 +44,10 @@
 		F3F5585525E9781800256AA6 /* RxRover.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3F5585325E9781800256AA6 /* RxRover.xcdatamodeld */; };
 		F3F5585725E9781A00256AA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3F5585625E9781A00256AA6 /* Assets.xcassets */; };
 		F3F5585A25E9781A00256AA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3F5585825E9781A00256AA6 /* LaunchScreen.storyboard */; };
-		F3F5587025E9781A00256AA6 /* RxRoverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F5586F25E9781A00256AA6 /* RxRoverUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		F3F5586125E9781A00256AA6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F3F5583F25E9781800256AA6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F3F5584625E9781800256AA6;
-			remoteInfo = RxRover;
-		};
-		F3F5586C25E9781A00256AA6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F3F5583F25E9781800256AA6 /* Project object */;
 			proxyType = 1;
@@ -109,9 +101,6 @@
 		F3F5585B25E9781A00256AA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3F5586025E9781A00256AA6 /* RxRoverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxRoverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3F5586625E9781A00256AA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F3F5586B25E9781A00256AA6 /* RxRoverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxRoverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3F5586F25E9781A00256AA6 /* RxRoverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxRoverUITests.swift; sourceTree = "<group>"; };
-		F3F5587125E9781A00256AA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAE931DEEE5295270975E11F /* Pods-RxRoverTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxRoverTests.debug.xcconfig"; path = "Target Support Files/Pods-RxRoverTests/Pods-RxRoverTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,13 +118,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A3C23ECF10C125934BB6FF8 /* Pods_RxRoverTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F3F5586825E9781A00256AA6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,7 +291,6 @@
 			children = (
 				F3F5584925E9781800256AA6 /* RxRover */,
 				F3F5586325E9781A00256AA6 /* RxRoverTests */,
-				F3F5586E25E9781A00256AA6 /* RxRoverUITests */,
 				F3F5584825E9781800256AA6 /* Products */,
 				6E74C207B955DA92F3DD72E9 /* Pods */,
 				A3E18DDF8DD49D445B6630A2 /* Frameworks */,
@@ -321,7 +302,6 @@
 			children = (
 				F3F5584725E9781800256AA6 /* RxRover.app */,
 				F3F5586025E9781A00256AA6 /* RxRoverTests.xctest */,
-				F3F5586B25E9781A00256AA6 /* RxRoverUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -345,15 +325,6 @@
 				F3F5586625E9781A00256AA6 /* Info.plist */,
 			);
 			path = RxRoverTests;
-			sourceTree = "<group>";
-		};
-		F3F5586E25E9781A00256AA6 /* RxRoverUITests */ = {
-			isa = PBXGroup;
-			children = (
-				F3F5586F25E9781A00256AA6 /* RxRoverUITests.swift */,
-				F3F5587125E9781A00256AA6 /* Info.plist */,
-			);
-			path = RxRoverUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -398,24 +369,6 @@
 			productReference = F3F5586025E9781A00256AA6 /* RxRoverTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F3F5586A25E9781A00256AA6 /* RxRoverUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F3F5587A25E9781A00256AA6 /* Build configuration list for PBXNativeTarget "RxRoverUITests" */;
-			buildPhases = (
-				F3F5586725E9781A00256AA6 /* Sources */,
-				F3F5586825E9781A00256AA6 /* Frameworks */,
-				F3F5586925E9781A00256AA6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F3F5586D25E9781A00256AA6 /* PBXTargetDependency */,
-			);
-			name = RxRoverUITests;
-			productName = RxRoverUITests;
-			productReference = F3F5586B25E9781A00256AA6 /* RxRoverUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -429,10 +382,6 @@
 						CreatedOnToolsVersion = 12.4;
 					};
 					F3F5585F25E9781A00256AA6 = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = F3F5584625E9781800256AA6;
-					};
-					F3F5586A25E9781A00256AA6 = {
 						CreatedOnToolsVersion = 12.4;
 						TestTargetID = F3F5584625E9781800256AA6;
 					};
@@ -453,7 +402,6 @@
 			targets = (
 				F3F5584625E9781800256AA6 /* RxRover */,
 				F3F5585F25E9781A00256AA6 /* RxRoverTests */,
-				F3F5586A25E9781A00256AA6 /* RxRoverUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -469,13 +417,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F3F5585E25E9781A00256AA6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F3F5586925E9781A00256AA6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -613,14 +554,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F3F5586725E9781A00256AA6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F3F5587025E9781A00256AA6 /* RxRoverUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -628,11 +561,6 @@
 			isa = PBXTargetDependency;
 			target = F3F5584625E9781800256AA6 /* RxRover */;
 			targetProxy = F3F5586125E9781A00256AA6 /* PBXContainerItemProxy */;
-		};
-		F3F5586D25E9781A00256AA6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F3F5584625E9781800256AA6 /* RxRover */;
-			targetProxy = F3F5586C25E9781A00256AA6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -850,46 +778,6 @@
 			};
 			name = Release;
 		};
-		F3F5587B25E9781A00256AA6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9ZR496RB3Q;
-				INFOPLIST_FILE = RxRoverUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.madebyhive.RxRoverUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = RxRover;
-			};
-			name = Debug;
-		};
-		F3F5587C25E9781A00256AA6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9ZR496RB3Q;
-				INFOPLIST_FILE = RxRoverUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.madebyhive.RxRoverUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = RxRover;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -916,15 +804,6 @@
 			buildConfigurations = (
 				F3F5587825E9781A00256AA6 /* Debug */,
 				F3F5587925E9781A00256AA6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F3F5587A25E9781A00256AA6 /* Build configuration list for PBXNativeTarget "RxRoverUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F3F5587B25E9781A00256AA6 /* Debug */,
-				F3F5587C25E9781A00256AA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
