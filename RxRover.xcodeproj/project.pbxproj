@@ -24,7 +24,6 @@
 		F3C0453125EE262D00727FD4 /* PhotosLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C0453025EE262D00727FD4 /* PhotosLogic.swift */; };
 		F3C0453B25EE489400727FD4 /* RoverName.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C0453A25EE489400727FD4 /* RoverName.swift */; };
 		F3C0454025EE49A800727FD4 /* PhotosLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C0453F25EE49A800727FD4 /* PhotosLogicTests.swift */; };
-		F3C0454B25EE5CC300727FD4 /* RxHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C0454A25EE5CC300727FD4 /* RxHelpers.swift */; };
 		F3C0455725EE86FF00727FD4 /* PhotoLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C0455625EE86FF00727FD4 /* PhotoLogic.swift */; };
 		F3C0456225EFBDD100727FD4 /* UILabel+AttributedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C0456125EFBDD100727FD4 /* UILabel+AttributedStrings.swift */; };
 		F3C0456725EFBFF700727FD4 /* PhotoLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C0456625EFBFF700727FD4 /* PhotoLogicTests.swift */; };
@@ -44,6 +43,7 @@
 		F3F5585525E9781800256AA6 /* RxRover.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3F5585325E9781800256AA6 /* RxRover.xcdatamodeld */; };
 		F3F5585725E9781A00256AA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3F5585625E9781A00256AA6 /* Assets.xcassets */; };
 		F3F5585A25E9781A00256AA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3F5585825E9781A00256AA6 /* LaunchScreen.storyboard */; };
+		F3FAD3D725F0D4C300EFFBA9 /* UIKit+RxHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FAD3D625F0D4C300EFFBA9 /* UIKit+RxHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,7 +77,6 @@
 		F3C0453025EE262D00727FD4 /* PhotosLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosLogic.swift; sourceTree = "<group>"; };
 		F3C0453A25EE489400727FD4 /* RoverName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverName.swift; sourceTree = "<group>"; };
 		F3C0453F25EE49A800727FD4 /* PhotosLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosLogicTests.swift; sourceTree = "<group>"; };
-		F3C0454A25EE5CC300727FD4 /* RxHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxHelpers.swift; sourceTree = "<group>"; };
 		F3C0455625EE86FF00727FD4 /* PhotoLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLogic.swift; sourceTree = "<group>"; };
 		F3C0456125EFBDD100727FD4 /* UILabel+AttributedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+AttributedStrings.swift"; sourceTree = "<group>"; };
 		F3C0456625EFBFF700727FD4 /* PhotoLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLogicTests.swift; sourceTree = "<group>"; };
@@ -101,6 +100,7 @@
 		F3F5585B25E9781A00256AA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3F5586025E9781A00256AA6 /* RxRoverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxRoverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3F5586625E9781A00256AA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3FAD3D625F0D4C300EFFBA9 /* UIKit+RxHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+RxHelpers.swift"; sourceTree = "<group>"; };
 		FAE931DEEE5295270975E11F /* Pods-RxRoverTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxRoverTests.debug.xcconfig"; path = "Target Support Files/Pods-RxRoverTests/Pods-RxRoverTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -271,9 +271,9 @@
 				F3C707C525ED1AD80012D484 /* UITabBarItem+Chunky.swift */,
 				F3206B7625ED31270051C31F /* UIView+AutoLayout.swift */,
 				F3206B7B25ED31940051C31F /* UIImage+Color.swift */,
-				F3C0454A25EE5CC300727FD4 /* RxHelpers.swift */,
 				F3C0456125EFBDD100727FD4 /* UILabel+AttributedStrings.swift */,
 				F3C0457525EFC63900727FD4 /* UIViewController+Alerts.swift */,
+				F3FAD3D625F0D4C300EFFBA9 /* UIKit+RxHelpers.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -513,6 +513,7 @@
 			files = (
 				F339F69725EAC55000BE0DD5 /* PhotoConnector.swift in Sources */,
 				F3F5585525E9781800256AA6 /* RxRover.xcdatamodeld in Sources */,
+				F3FAD3D725F0D4C300EFFBA9 /* UIKit+RxHelpers.swift in Sources */,
 				F3C707BE25ED1A760012D484 /* TabsConnector.swift in Sources */,
 				F339F68A25EAC4D500BE0DD5 /* FavsViewController.swift in Sources */,
 				F339F69225EAC53C00BE0DD5 /* FavsConnector.swift in Sources */,
@@ -524,7 +525,6 @@
 				F3C0457625EFC63900727FD4 /* UIViewController+Alerts.swift in Sources */,
 				F339F68225EAC4A400BE0DD5 /* FavsNavigtionConnector.swift in Sources */,
 				F339F69D25EAC5D900BE0DD5 /* RoversViewController.swift in Sources */,
-				F3C0454B25EE5CC300727FD4 /* RxHelpers.swift in Sources */,
 				F3C7077225ECEE7B0012D484 /* NetworkUtils.swift in Sources */,
 				F3F5584B25E9781800256AA6 /* AppDelegate.swift in Sources */,
 				F3C0453125EE262D00727FD4 /* PhotosLogic.swift in Sources */,

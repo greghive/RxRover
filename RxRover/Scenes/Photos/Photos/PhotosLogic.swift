@@ -12,7 +12,7 @@ enum PhotosLogic {
     
     static func roverName(at index: Int) -> RoverName { roverNames[index] }
     
-    static func trigger(_ refresh: Observable<Void>, _ filter: Observable<Int>) -> Observable<RoverName> {
+    static func triggers(_ refresh: Observable<Void>, _ filter: Observable<Int>) -> Observable<RoverName> {
         return Observable.merge(
             refresh
                 .withLatestFrom(filter)
@@ -33,10 +33,9 @@ enum PhotosLogic {
     }
     
     private static func loading(_ refresh: Observable<Void>, _ filter: Observable<Int>, _ response: Observable<[Photo]>) -> Observable<Bool> {
-        return Observable
-            .merge(
-                trigger(refresh, filter).map(to: true),
+        return Observable.merge(
+                triggers(refresh, filter).map(to: true),
                 response.map(to: false)
-            )
+        )
     }
 }

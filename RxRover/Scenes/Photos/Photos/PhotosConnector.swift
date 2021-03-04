@@ -11,35 +11,21 @@ import RxCocoa
 
 extension PhotosViewController {
     func connect() -> Observable<Photo> {
-                
-        //MARK: config vc
-        
+                        
         segmentedControl.set(titles: PhotosLogic.roverNames.map { $0.name })
         segmentedControl.selectedSegmentIndex = 2
         collectionView.register(PhotosCell.self, forCellWithReuseIdentifier: PhotosCell.reuseIdentifier)
         
-        //MARK: vc causes
-        
-        let refresh = collectionView.refreshControl!.rx
-            .controlEvent(.valueChanged)
-            .asObservable()
-        
-        let filter = segmentedControl.rx
-            .value
-            .asObservable()
-        
-        //MARK: cause -> logic - > effect
-        
-        let photos = PhotosLogic.trigger(refresh, filter)
+        let photos = PhotosLogic.triggers(collectionView.refreshControl!.refresh(), segmentedControl.value())
             .flatMapLatest { apiResponse(from: .getPhotos(for: $0)) }
             .map { $0.photos }
             .share(replay: 1)
         
-        _ = PhotosLogic.initialLoading(refresh, filter, photos)
+        _ = PhotosLogic.initialLoading(collectionView.refreshControl!.refresh(), segmentedControl.value(), photos)
             .bind(to: activityView.rx.isAnimating)
             .disposed(by: disposeBag)
         
-        _ = PhotosLogic.refreshLoading(refresh, filter, photos)
+        _ = PhotosLogic.refreshLoading(collectionView.refreshControl!.refresh(), segmentedControl.value(), photos)
             .bind(to: collectionView.refreshControl!.rx.isRefreshing)
             .disposed(by: disposeBag)
         
@@ -47,9 +33,7 @@ extension PhotosViewController {
             .bind(to: collectionView.rx.items(cellIdentifier: PhotosCell.reuseIdentifier, cellType: PhotosCell.self)) { _, photo, cell in
                 cell.bind(with: photo)
             }.disposed(by: disposeBag)
-        
-        //MARK: scene action
-        
+                
         return collectionView.rx
             .itemSelected
             .withLatestFrom(photos) { $1[$0.row] }
