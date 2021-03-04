@@ -81,7 +81,6 @@
 		F3C0455625EE86FF00727FD4 /* PhotoLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLogic.swift; sourceTree = "<group>"; };
 		F3C0456125EFBDD100727FD4 /* UILabel+AttributedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+AttributedStrings.swift"; sourceTree = "<group>"; };
 		F3C0456625EFBFF700727FD4 /* PhotoLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLogicTests.swift; sourceTree = "<group>"; };
-		F3C0457225EFC4E400727FD4 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		F3C0457525EFC63900727FD4 /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
 		F3C7076C25ECED540012D484 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		F3C7077125ECEE7B0012D484 /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
@@ -179,7 +178,6 @@
 		F392AA4425E97C61000BAA5D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F3C0457225EFC4E400727FD4 /* Config.xcconfig */,
 				F3F5585B25E9781A00256AA6 /* Info.plist */,
 				F3F5585625E9781A00256AA6 /* Assets.xcassets */,
 				F3F5585825E9781A00256AA6 /* LaunchScreen.storyboard */,
@@ -580,7 +578,6 @@
 /* Begin XCBuildConfiguration section */
 		F3F5587225E9781A00256AA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F3C0457225EFC4E400727FD4 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -642,7 +639,6 @@
 		};
 		F3F5587325E9781A00256AA6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F3C0457225EFC4E400727FD4 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
