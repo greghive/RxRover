@@ -22,13 +22,11 @@ extension PhotosViewController {
         
         let refresh = collectionView.refreshControl!.rx
             .controlEvent(.valueChanged)
-            .mapVoid()
-            .share(replay: 1)
+            .asObservable()
         
         let filter = segmentedControl.rx
             .value
             .asObservable()
-            .share(replay: 1)
         
         //MARK: cause -> logic - > effect
         
