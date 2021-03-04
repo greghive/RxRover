@@ -44,6 +44,7 @@
 		F3F5585725E9781A00256AA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3F5585625E9781A00256AA6 /* Assets.xcassets */; };
 		F3F5585A25E9781A00256AA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3F5585825E9781A00256AA6 /* LaunchScreen.storyboard */; };
 		F3FAD3D725F0D4C300EFFBA9 /* UIKit+RxHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FAD3D625F0D4C300EFFBA9 /* UIKit+RxHelpers.swift */; };
+		F3FAD3DB25F0DD8400EFFBA9 /* Photo+Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FAD3DA25F0DD8400EFFBA9 /* Photo+Mocks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		F3F5586025E9781A00256AA6 /* RxRoverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxRoverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3F5586625E9781A00256AA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3FAD3D625F0D4C300EFFBA9 /* UIKit+RxHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+RxHelpers.swift"; sourceTree = "<group>"; };
+		F3FAD3DA25F0DD8400EFFBA9 /* Photo+Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Photo+Mocks.swift"; sourceTree = "<group>"; };
 		FAE931DEEE5295270975E11F /* Pods-RxRoverTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxRoverTests.debug.xcconfig"; path = "Target Support Files/Pods-RxRoverTests/Pods-RxRoverTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -322,6 +324,7 @@
 			children = (
 				F3C0453F25EE49A800727FD4 /* PhotosLogicTests.swift */,
 				F3C0456625EFBFF700727FD4 /* PhotoLogicTests.swift */,
+				F3FAD3DA25F0DD8400EFFBA9 /* Photo+Mocks.swift */,
 				F3F5586625E9781A00256AA6 /* Info.plist */,
 			);
 			path = RxRoverTests;
@@ -550,6 +553,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3C0454025EE49A800727FD4 /* PhotosLogicTests.swift in Sources */,
+				F3FAD3DB25F0DD8400EFFBA9 /* Photo+Mocks.swift in Sources */,
 				F3C0456725EFBFF700727FD4 /* PhotoLogicTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

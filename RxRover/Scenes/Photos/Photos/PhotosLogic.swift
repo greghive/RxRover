@@ -22,20 +22,20 @@ enum PhotosLogic {
         )
     }
     
-    static func initialLoading(_ refresh: Observable<Void>, _ filter: Observable<Int>, _ response: Observable<[Photo]>) -> Observable<Bool> {
-        return loading(refresh, filter, response)
+    static func initialLoading(_ refresh: Observable<Void>, _ filter: Observable<Int>, _ photos: Observable<[Photo]>) -> Observable<Bool> {
+        return loading(refresh, filter, photos)
             .take(2)
     }
     
-    static func refreshLoading(_ refresh: Observable<Void>, _ filter: Observable<Int>, _ response: Observable<[Photo]>) -> Observable<Bool> {
-        return loading(refresh, filter, response)
+    static func refreshLoading(_ refresh: Observable<Void>, _ filter: Observable<Int>, _ photos: Observable<[Photo]>) -> Observable<Bool> {
+        return loading(refresh, filter, photos)
             .skip(1)
     }
     
-    private static func loading(_ refresh: Observable<Void>, _ filter: Observable<Int>, _ response: Observable<[Photo]>) -> Observable<Bool> {
+    private static func loading(_ refresh: Observable<Void>, _ filter: Observable<Int>, _ photos: Observable<[Photo]>) -> Observable<Bool> {
         return Observable.merge(
                 triggers(refresh, filter).map(to: true),
-                response.map(to: false)
+                photos.map(to: false)
         )
     }
 }
