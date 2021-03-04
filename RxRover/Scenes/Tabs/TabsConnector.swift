@@ -15,11 +15,8 @@ extension UITabBarController {
         photos.tabBarItem = .chunky(title: "Photos", icon: "camera.fill", tag: 0)
         viewControllers = [photos]
         
-        _ = errorRouter
-            .error
+        _ = errorRouter.error
             .map { $0.localizedDescription }
-            .bind { [unowned self] message in
-            self.showBasicAlert(message: message)
-        }
+            .bind(onNext: presentScene(animated: true, scene: basicAlert(title: "Error")))
     }
 }

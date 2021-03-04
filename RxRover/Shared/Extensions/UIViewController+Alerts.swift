@@ -6,13 +6,17 @@
 //
 
 import UIKit
+import Cause_Logic_Effect
 
 extension UIViewController {
     
-    func showBasicAlert(title: String? = nil, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default))
-        present(alert, animated: true)
+    func basicAlert(title: String? = nil) -> (_ message: String) -> Scene<Never> {
+        return { message in
+            return UIAlertController(title: title, message: message, preferredStyle: .alert).scene {
+                $0.connectOK()
+                  .ignoreElements()
+            }
+        }
     }
 }
 
