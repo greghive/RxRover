@@ -149,8 +149,8 @@
 		F339F69B25EAC5BF00BE0DD5 /* Rovers */ = {
 			isa = PBXGroup;
 			children = (
-				F339F69C25EAC5D900BE0DD5 /* RoversViewController.swift */,
 				F339F6A425EAC60500BE0DD5 /* RoversConnector.swift */,
+				F339F69C25EAC5D900BE0DD5 /* RoversViewController.swift */,
 			);
 			path = Rovers;
 			sourceTree = "<group>";
@@ -217,9 +217,9 @@
 		F392AA5C25EAC03E000BAA5D /* Photos */ = {
 			isa = PBXGroup;
 			children = (
-				F392AA6725EAC215000BAA5D /* PhotosViewController.swift */,
 				F392AA6F25EAC25F000BAA5D /* PhotosConnector.swift */,
 				F3C0453025EE262D00727FD4 /* PhotosLogic.swift */,
+				F392AA6725EAC215000BAA5D /* PhotosViewController.swift */,
 				F3C707A925ED0C3B0012D484 /* PhotosCell.swift */,
 				F3C707CA25ED1C8B0012D484 /* CustomGridLayout.swift */,
 			);
@@ -229,9 +229,9 @@
 		F392AA5D25EAC048000BAA5D /* Photo */ = {
 			isa = PBXGroup;
 			children = (
-				F339F67625EAC2C400BE0DD5 /* PhotoViewController.swift */,
 				F339F69625EAC55000BE0DD5 /* PhotoConnector.swift */,
 				F3C0455625EE86FF00727FD4 /* PhotoLogic.swift */,
+				F339F67625EAC2C400BE0DD5 /* PhotoViewController.swift */,
 			);
 			path = Photo;
 			sourceTree = "<group>";
@@ -239,8 +239,8 @@
 		F392AA5E25EAC0D9000BAA5D /* Favs */ = {
 			isa = PBXGroup;
 			children = (
-				F339F68925EAC4D500BE0DD5 /* FavsViewController.swift */,
 				F339F69125EAC53C00BE0DD5 /* FavsConnector.swift */,
+				F339F68925EAC4D500BE0DD5 /* FavsViewController.swift */,
 			);
 			path = Favs;
 			sourceTree = "<group>";
